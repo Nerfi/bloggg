@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 gem 'cloudinary', '~> 1.9.1'
+#gema que añadimos para dejar al user añadir img
 gem 'carrierwave', '~> 1.2'
 
 
