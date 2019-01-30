@@ -1,19 +1,11 @@
+<!-- añadingo img tag para desplegar la forma -->
+<% if @article.photo.present? %>
 <%= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
-
+<% end %>
 <!-- añadiendo background for a card for instance -->
 
-<div class="card"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path @article.photo, height: 300, width: 400, crop: :fill %>')">
-  <div class="card-category">Popular</div>
-  <div class="card-description">
-    <h2>Some stuff</h2>
-    <p>Very cool stuff, useful and smart</p>
-  </div>
-  <a class="card-link" href="#" ></a>
-</div>
-<!-- añadiendo img de background card -->
-<%= image_tag @article.photo.url(:bright_face) %>
+<!-- añadiendo img de background card, not working -->
+
 
 
 <p id="notice"><%= notice %></p>
