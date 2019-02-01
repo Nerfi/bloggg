@@ -1,7 +1,7 @@
 class PhotoUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
-# añadiendo codigo para poder añadir una img como background de unas cartas usando claudinary service
+# añadiendo codigo para poder añadir una img como background de unas cartas usando claudinary service, not working
  process eager: true  # Force version generation at upload time.
 
   process convert: 'jpg'
