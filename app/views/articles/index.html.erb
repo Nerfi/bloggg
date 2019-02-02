@@ -15,6 +15,14 @@ width and height gracias a claudinary -->
 <!-- solo para saber un poco mas de los diferentes crops -->
       <%= cl_image_tag("qd2lujxd5fmwdzhd4eyc",
       width: 150, height: 200, crop: :pad) %>
+      <!-- para card with background  -->
+
+      <!-- probando resolver problema con `cl`, not working -->
+
+      <%= cl_image_path("qd2lujxd5fmwdzhd4eyc",
+      width: 150, height: 200, crop: :pad) %>
+
+
 
 <p id="notice"><%= notice %></p>
 
@@ -43,5 +51,17 @@ width and height gracias a claudinary -->
 </table>
 
 <br>
+<!--añadiendo card with background with cloudinary img -->
+
+<div class="card"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @article.photo, height: 300, width: 400, crop: :fill %>')">
+  <div class="card-category">Popular</div>
+  <div class="card-description">
+    <h2>Some stuff</h2>
+    <p>Very cool stuff, useful and smart</p>
+  </div>
+  <a class="card-link" href="#" ></a>
+</div>
 
 <%= link_to 'New Article', new_article_path %>
